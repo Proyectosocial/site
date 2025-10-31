@@ -8,6 +8,7 @@ body {
 }
 
 /*HEADER SECTION*/
+
 .header {
     height: 100vh;
     box-sizing: border-box;
@@ -45,7 +46,7 @@ body {
     min-width: 250px;
     max-width: 40%;
     border-radius: 50%;
-    border: 6px solid #fff;
+    border: 6px solid #df1414;
     margin: 20px;
     
 
@@ -90,11 +91,11 @@ h1 {
 } 
 
 .nav__logo-container {
-    flex-grow: 4;
+    flex-grow: 9;
 }
 
 .nav__ul-container, .nav__ul-container {
-    flex-grow: 1;
+    flex-grow: 6;
     text-align: center;
 }
 
@@ -146,137 +147,155 @@ h1 {
 /*MAX-SECTION*/
 
 .main {
+    
     max-width: 1000px;
 
 }
 
-body {
-    margin: 0;
-    background-color: #d8cfcf;
+h3 {
+    color: #0d88cf;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.wrapper {
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #0d88cf;
+
+}
+
+/* CARRUSEL */
+
+em {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#0d88cf;
+}
+
+
+.hwrap {
+    overflow: hidden; /* HIDE SCROLL BAR */
+    background: #fff;
+    }
+
+.hmove { display: flex; }
+
+.hitem {
+    flex-shrink: 0;
+    width: 25vw%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    }
+    
+    @keyframes tickerh {
+        0% { transform: translate3d(100%, 0, 0); }
+        100% { transform: translate3d(-200%, 0, 0); }
+    }
+.hmove { animation: tickerh linear 20s infinite; }
+.hmove:hover { animation-play-state: paused; }
+
+
+
+.tabs_panel_dominios{background:#ffffff;background-image:url("https://click.com.ar/images/fondo-registro-dominios.webp");background-repeat:no-repeat;background-position:top;padding:20px 0 60px 0;color:#FFFFFF;}
+.tabs_panel_dominios .etabs{float:left;width:100%;margin-bottom:50px;padding:0 0 0px 0;border-bottom:0px solid #333;}
+.tabs_panel_dominios .etabs li{float:left;margin-bottom:10px;margin-right:10px;}
+.tabs_panel_dominios .etabs i{color:rgba(0,100,255,0.80);margin-right:15px;}
+.tabs_panel_dominios .tab{display:inline-block;zoom:1;*display:inline;background:rgba(255, 255, 109,0.7);color:#001eef;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
+.tabs_panel_dominios .tab a{display:block;padding:6px 30px;color:#fff;outline:none;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
+.tabs_panel_dominios .tab a.active{color:#fff;background:rgba(60, 179, 113,0.5);border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
+.tabs_panel_dominios .tab a.active i{color:#fff;}
+.tabs_panel_dominios .tab a:hover{background:rgba(0,100,255,0.80);}
+.tabs_panel_dominios .tab a:hover i{color:#fff;}
+.tabs_panel_dominios .tab-container > div{background:transparent;padding:30px 0;border:none;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
+.tabs_panel_dominios h1{font-size:20px;padding:0 0 10px 0;font-weight:normal;color:#ffffff;text-transform:uppercase;}
+.tabs_panel_dominios h1 em{font-weight:bold;}
+.tabs_panel_dominios .tab-container div i{color:#ffffff;}
+.tabs_panel_dominios .box_feature h6{color:#fff;}
+.tabs_panel_dominios .box_feature .box_feature_icon span{background:#0d0d0d;}
+
+.tabs_panel_pagos{background:#ffffff;background-image:url("https://click.com.ar/images/fondo-registro-dominios.webp");background-repeat:no-repeat;background-position:top;padding:20px 0 60px 0;color:#FFFFFF;}.tabs_panel_pagos .etabs{float:left;width:100%;margin-bottom:50px;padding:0 0 0px 0;border-bottom:0px solid #333;}.tabs_panel_pagos .etabs li{float:left;margin-bottom:10px;margin-right:10px;}.tabs_panel_pagos .etabs i{color:rgba(0,100,255,0.80);margin-right:15px;}.tabs_panel_pagos .tab{display:inline-block;zoom:1;*display:inline;background:rgba(255, 255, 109,0.7);color:#001eef;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}.tabs_panel_pagos .tab a{display:block;padding:6px 30px;color:#fff;outline:none;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}.tabs_panel_pagos .tab a.active{color:#fff;background:rgba(60, 179, 113,0.5);border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}.tabs_panel_pagos .tab a.active i{color:#fff;}.tabs_panel_pagos .tab a:hover{background:rgba(0,100,255,0.80);}.tabs_panel_pagos .tab a:hover i{color:#fff;}.tabs_panel_pagos .tab-container > div{background:transparent;padding:30px 0;border:none;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}.tabs_panel_pagos h1{font-size:20px;padding:0 0 10px 0;font-weight:normal;color:#ffffff;text-transform:uppercase;}.tabs_panel_pagos h1 em{font-weight:bold;}.tabs_panel_pagos .tab-container div i{color:#ffffff;}.tabs_panel_pagos .box_feature h6{color:#fff;}.tabs_panel_pagos .box_feature .box_feature_icon span{background:#0d0d0d;}
+
+
+.latest_posts_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.post_grid_item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column;
-    height: 80vh;
-    justify-content: space-evenly;
-    align-items: center;
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    text-align: left; /* Alinea el texto a la izquierda en pantallas grandes */
 }
 
-.btn {
-    padding: 10px 40px;
-    background-color: transparent;
-    color: #fff;
-    border-radius: 6px;
-    letter-spacing: 3px;
-    position: relative;
-
+.post_grid_item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%; /* Redondea la imagen en forma de círculo */
+    margin-right: 15px;
+    /* opacity: 0.8; */
 }
 
-/* ---- WAVE BUTTON ---- */
-
-
-.btn-1 {
-    border: 1px solid #48e;
-    overflow: hidden;
-
+.post_content {
+    flex: 1;
 }
 
-.btn-1::before {
-    content: '';
-    background-color: #48e;
-    display: block;
-    height: 200%;
-    width: 140%;
-    position: absolute;
-    z-index: -1;
-    transition: top .6s, left .6s, margin .6s;
-    border-radius: 50%;
-    top: 100%;
-    left: 30%;
+.post_content h6 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
 }
 
-.btn-1:hover::before {
-    top: -35%;
-    left: -20%;
-    
+.post_content h6 a {
+    /* color: #333; */
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-/* ---- NEON BUTTON ---- */
-
-H3 {
-    width: fit-content;
-    color: #48e;
+.post_content h6 a:hover {
+    color: #007bff;
 }
 
-.button-container:has(.btn-2) {
-    filter: drop-shadow(0px 0px 20px #48e)
-    drop-shadow(0px 0px 4px #48e);
-
+.post_content p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
 }
 
-.btn-2 {
-    border: 1px solid #fff3;
-    color: #fff3;
+.post_content p a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
 }
 
-.btn-2:hover {
-    animation: parpadear 10s infinite alternate backwards;
+.post_content p a:hover {
+   /* text-decoration: underline; */
 }
-    
 
-@keyframes parpadear {
-    0% {
-        color: #fff3;
-        border: 1px solid #fff3;
-        text-shadow: none;
-        box-shadow: none;
+/* Media query para pantallas móviles */
+@media (max-width: 768px) {
+    .latest_posts_grid {
+        grid-template-columns: 1fr;
     }
 
-    25% {
-        border-color: #48e;
-        color: rgb(111, 168, 255);
-        box-shadow: 0px 0px 6px #48e3, 0px 0px 16px #48e5;
-        text-shadow: 0px 0px 9px #48e3, 0px 0px 16px #48e(159 197, 255, 0.454);
-        }
-            
-    30% {
-        color: #fff3;
-        border: 1px solid #fff3;
-        text-shadow: none;
-        box-shadow: none;
+    .post_grid_item {
+        flex-direction: column; /* Imagen arriba y contenido abajo */
+        align-items: center; /* Centra los elementos en la columna */
+        text-align: center; /* Centra el texto */
     }
 
-    35% {
-        color: #48e;
-        text-shadow: 0px 0px 5px #48ee, 0px 0px 3px rgba(159, 197, 255, 0,454)
-    }
-    
-
-        46% {
-            color: #fff3;
-            border: 1px solid #fff3;
-            text-shadow: none;
-            box-shadow: none;
-        }
-    
-        60% {
-            border-color: #48e;
-            box-shadow: 0px 0px 6px #48e3, 0px 0px 16px #48e5;
-        }
-        
-        
-    78% {
-        color: #fff3;
-        border: 1px solid #fff3;
-        text-shadow: none;
-        box-shadow: none;
+    .post_grid_item img {
+        margin: 0 0 10px; /* Elimina el margen derecho y agrega margen inferior */
     }
 
-    100% {
-        color: #48e;
-        text-shadow: 0px 0px 5px #48ee, 0px 0px 3px rgba(159, 197, 255, 0,454)
+    .post_content {
+        text-align: center; /* Centra el texto */
     }
-    
-    
 }

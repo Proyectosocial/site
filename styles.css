@@ -56,7 +56,7 @@ body {
 
 h1 {
     color: #daf0d1;
-    margin: 130px;
+    margin: 1px;
     font-size: 3.6rem;
     text-wrap: balance;
     text-align-last: center;
@@ -370,7 +370,7 @@ tbody, div, span, img {
 
 img {
     margin-top: 3%;
-    margin-left: -1rem;
+    margin-left: 1rem;
     color: #111010;
 }
 
@@ -381,8 +381,8 @@ label {
 
 section {
 
-    margin-top: -25rem;
-    margin-left: 300px;
+    margin-top: -0rem;
+    margin-left: 80px;
     
 }
 

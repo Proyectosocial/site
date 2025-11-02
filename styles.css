@@ -18,7 +18,7 @@ body {
     
     
 }
-
+/*
 .header__overlay {
     height: 100vh;
     width: 100%;
@@ -28,7 +28,7 @@ body {
     
 
 }
-
+*/
 .header__item-container {
     position: relative;
     z-index: 10;
@@ -48,15 +48,16 @@ body {
     border-radius: 50%;
     border: 3px solid #53525204;
     margin: -25px;
-    margin-right: -1%;
+    margin-right: -6%;
     margin-top: -80%;
     
 
 }
 
 h1 {
+    color: #daf0d1;
     margin: 130px;
-    font-size: 1.5rem;
+    font-size: 3.6rem;
     text-wrap: balance;
     text-align-last: center;
     text-align: unset;
@@ -110,6 +111,8 @@ h1 {
     background-size: contain;
 }
 
+
+
 .nav__link {
     color: rgb(213, 176, 248);
     text-decoration: none;
@@ -157,7 +160,7 @@ h1 {
 }
 
 h2 {
-    color: #0d88cf;
+    color: #0806a8;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 50px;
     background-color: #e9c0f1;
@@ -165,7 +168,7 @@ h2 {
 
 p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #0d88cf;
+    color: #0d1acf;
 
 }
 
@@ -200,28 +203,6 @@ em {
 .hmove { animation: tickerh linear 20s infinite; }
 .hmove:hover { animation-play-state: paused; }
 
-/*
-
-.tabs_panel_dominios{background:#ffffff;background-image:url("https://click.com.ar/images/fondo-registro-dominios.webp");background-repeat:no-repeat;background-position:top;padding:20px 0 60px 0;color:#FFFFFF;}
-.tabs_panel_dominios .etabs{float:left;width:100%;margin-bottom:50px;padding:0 0 0px 0;border-bottom:0px solid #333;}
-.tabs_panel_dominios .etabs li{float:left;margin-bottom:10px;margin-right:10px;}
-.tabs_panel_dominios .etabs i{color:rgba(0,100,255,0.80);margin-right:15px;}
-.tabs_panel_dominios .tab{display:inline-block;zoom:1;*display:inline;background:rgba(255, 255, 109,0.7);color:#001eef;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
-.tabs_panel_dominios .tab a{display:block;padding:6px 30px;color:#fff;outline:none;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
-.tabs_panel_dominios .tab a.active{color:#fff;background:rgba(60, 179, 113,0.5);border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
-.tabs_panel_dominios .tab a.active i{color:#fff;}
-.tabs_panel_dominios .tab a:hover{background:rgba(0,100,255,0.80);}
-.tabs_panel_dominios .tab a:hover i{color:#fff;}
-.tabs_panel_dominios .tab-container > div{background:transparent;padding:30px 0;border:none;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
-.tabs_panel_dominios h1{font-size:20px;padding:0 0 10px 0;font-weight:normal;color:#ffffff;text-transform:uppercase;}
-.tabs_panel_dominios h1 em{font-weight:bold;}
-.tabs_panel_dominios .tab-container div i{color:#ffffff;}
-.tabs_panel_dominios .box_feature h6{color:#fff;}
-.tabs_panel_dominios .box_feature .box_feature_icon span{background:#0d0d0d;}
-
-.tabs_panel_pagos{background:#ffffff;background-image:url("https://click.com.ar/images/fondo-registro-dominios.webp");background-repeat:no-repeat;background-position:top;padding:20px 0 60px 0;color:#FFFFFF;}.tabs_panel_pagos .etabs{float:left;width:100%;margin-bottom:50px;padding:0 0 0px 0;border-bottom:0px solid #333;}.tabs_panel_pagos .etabs li{float:left;margin-bottom:10px;margin-right:10px;}.tabs_panel_pagos .etabs i{color:rgba(0,100,255,0.80);margin-right:15px;}.tabs_panel_pagos .tab{display:inline-block;zoom:1;*display:inline;background:rgba(255, 255, 109,0.7);color:#001eef;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}.tabs_panel_pagos .tab a{display:block;padding:6px 30px;color:#fff;outline:none;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}.tabs_panel_pagos .tab a.active{color:#fff;background:rgba(60, 179, 113,0.5);border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}.tabs_panel_pagos .tab a.active i{color:#fff;}.tabs_panel_pagos .tab a:hover{background:rgba(0,100,255,0.80);}.tabs_panel_pagos .tab a:hover i{color:#fff;}.tabs_panel_pagos .tab-container > div{background:transparent;padding:30px 0;border:none;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}.tabs_panel_pagos h1{font-size:20px;padding:0 0 10px 0;font-weight:normal;color:#ffffff;text-transform:uppercase;}.tabs_panel_pagos h1 em{font-weight:bold;}.tabs_panel_pagos .tab-container div i{color:#ffffff;}.tabs_panel_pagos .box_feature h6{color:#fff;}.tabs_panel_pagos .box_feature .box_feature_icon span{background:#0d0d0d;}
-
-*/
 
 .latest_posts_grid {
     display: grid;
@@ -328,6 +309,8 @@ em {
         
     }
 
+
+
     .form__input-container:first-child{
         grid-area: name;
     }
@@ -356,21 +339,65 @@ em {
 
 }
 
-h3 {
+
+/* M.PAGO Y CONTACTO */
+
+
+h3, form__titel {
+    margin-left: 100px;
+    color: #111010;
+
+
+
+}
+
+
+
+
+span {
     color: #111010;
 }
+
+tbody, div, span, img {
+    font-family: serif;
+    font-size: large;
+    margin-left: 50px;
+    color: #111010;
+    padding: auto;
+    font-family: serif;
+    font-size: large;
+}
+
+img {
+    margin-top: 3%;
+    margin-left: -1rem;
+    color: #111010;
+}
+
 
 label {
     color: #111010;
 }
 
+section {
+
+    margin-top: -25rem;
+    margin-left: 300px;
+    
+}
+
+
+
+    
 /* ------- CONTACT ENDS ------- */
 
 /* ------- FOOTER SECTION ------- */
 
 footer {
-    padding: 60px;
-    text-align: left;
+    margin-top: 18%;
+    height: 20px;
+    padding: 32px;
+    text-align: right;
     background-color: #18233f;
     color: rgba(250, 248, 248, 0.867);
     font-size: 23px;

@@ -10,25 +10,27 @@ body {
 /*HEADER SECTION*/
 
 .header {
+    word-wrap: break-word;
     height: 100vh;
     box-sizing: border-box;
     background-image: url(inteligenci-artificial-635x358.jpg);
     background-size: cover;
     display: flex;
     
-    
+
 }
-/*
+
+
 .header__overlay {
     height: 100vh;
     width: 100%;
-    background-color: rgba(101, 65, 160, 0.4);
+    background-color: rgba(18, 18, 19, 0);
     position: absolute;
     z-index: 1;
     
 
 }
-*/
+
 .header__item-container {
     position: relative;
     z-index: 10;
@@ -44,10 +46,10 @@ body {
 
 .header__img {
     min-width: 60px;
-    max-width: 20%;
+    max-width: 25%;
     border-radius: 50%;
     border: 3px solid #53525204;
-    margin: -25px;
+    margin: -20px;
     margin-right: -6%;
     margin-top: -80%;
     
@@ -55,13 +57,13 @@ body {
 }
 
 h1 {
-    color: #daf0d1;
-    margin: 1px;
-    font-size: 3.6rem;
-    text-wrap: balance;
-    text-align-last: center;
-    text-align: unset;
     
+    color: #daf0d1;
+    margin: -0.3rem;
+    font-size: 3.1rem;
+    text-wrap: absolute;
+    
+
 
 }
 
@@ -72,7 +74,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 6px 20px;
+    padding: 6px -20px;
     text-align: center;
     position: sticky;
     top: 0;
@@ -103,6 +105,7 @@ h1 {
     flex-grow: 6;
     text-align: start;
 }
+
 
 .li .nav__link {
     width: 20px;
@@ -149,6 +152,8 @@ h1 {
 
 .nav__logo {
     width: 70px;
+    border-radius: 50%;
+    margin-left: -5%;
 }
 
 /*MAX-SECTION*/
@@ -268,6 +273,8 @@ em {
    /* text-decoration: underline; */
 }
 
+
+
 /* Media query para pantallas móviles */
 @media (max-width: 768px) {
     .latest_posts_grid {
@@ -340,6 +347,26 @@ em {
 }
 
 
+.flotanteLand {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 630px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.233);
+    padding: 1px;
+    border-radius: 100px 0 0 100px;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+
+
+
+
 /* M.PAGO Y CONTACTO */
 
 
@@ -391,15 +418,24 @@ section {
     
 /* ------- CONTACT ENDS ------- */
 
-/* ------- FOOTER SECTION ------- */
 
+
+
+
+
+
+/* ------- FOOTER ------- */
+
+
+    
 footer {
-    margin-top: 18%;
-    height: 20px;
-    padding: 32px;
-    text-align: right;
+    padding: 60px;
+    text-align: left;
     background-color: #18233f;
-    color: rgba(250, 248, 248, 0.867);
+    color: #fffd;
     font-size: 23px;
 }
+
+
+
 

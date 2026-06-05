@@ -1,12 +1,20 @@
 body {
-    background-color: rgb(82, 82, 228);
+    background-color: rgb(220, 220, 243);
     text-align: center;
-    word-wrap: normal;
-    text-decoration: solid;
-    text-transform: uppercase;
-    font: 2em sans-serif;
-    height: auto;
-    font-family: Montserrat;
+    font-family: "Montserrat", sans-serif; /* Aplica la fuente de Google Fonts que importaste */
+    font-size: 1.2em;
+    line-height: 1.6; /* Mejora el espacio entre líneas para leer mejor */
+    max-width: 900px; /* Evita que las líneas de texto sean infinitamente largas */
+    margin: 0 auto; /* Centra el bloque de contenido en la pantalla */
+    padding: 20px;
 }
 
-    
+h1, h2 {
+    color: rgb(40, 40, 90);
+    margin-top: 30px;
+}
+
+p {
+    text-align: justify; /* Hace que los párrafos se vean más ordenados */
+    margin-bottom: 20px;
+}

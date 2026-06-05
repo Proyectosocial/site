@@ -1,3 +1,362 @@
+/* ==========================================================================
+1. VARIABLES DE DISEÑO (Eco-Tech: Verdes, Azules Oscuros y Grises Limpios)
+   ========================================================================== */
+:root {
+    --color-eco: #10b981;        /* Verde esmeralda para destacar el reciclaje */
+    --color-eco-hover: #059669;  /* Verde más oscuro para interacciones */
+    --color-bg-sitio: #f1f5f9;   /* Fondo gris/azul claro muy suave para descansar la vista */
+    --color-texto-dark: #0f172a; /* Azul oscuro casi negro para máxima lectura */
+    --color-texto-muted: #475569;/* Gris medio para párrafos secundarios */
+    --color-blanco: #ffffff;
+    --fuente-principal: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ==========================================================================
+2. REGLAS GENERALES Y RESET
+   ========================================================================== */
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-bg-sitio);
+    color: var(--color-texto-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+3. SECCIÓN HEADER (Encabezado con imagen de fondo)
+   ========================================================================== */
+.header {
+    height: 60vh; /* Bajado de 100vh a 60vh para que el usuario vea que hay contenido abajo */
+    background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('inteligenci-artificial-635x358.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.header__item-container {
+    max-width: 900px;
+    z-index: 10;
+}
+
+h1 {
+    color: var(--color-blanco);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================================================
+4. NAVBAR (Menú de Navegación Pegajoso)
+   ========================================================================== */
+.nav {
+    background-color: var(--color-blanco);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav__logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav__logo {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav__ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav__link {
+    color: var(--color-texto-muted);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav__link:hover {
+    color: var(--color-eco);
+    background-color: rgba(16, 185, 129, 0.1);
+}
+
+/* Botones con estilo Login/Destacado del menú */
+.link--login {
+    background-color: var(--color-eco);
+    color: var(--color-blanco);
+    border-radius: 30px;
+    padding: 8px 24px;
+    font-weight: 600;
+}
+
+.link--login:hover {
+    background-color: var(--color-eco-hover);
+    color: var(--color-blanco);
+}
+
+/* ==========================================================================
+5. CONTENIDO PRINCIPAL (Misión, Visión e instrucciones)
+   ========================================================================== */
+main {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: var(--color-blanco);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo para los títulos internos como Misión: y Visión: */
+main p:nth-of-type(1), 
+main p:nth-of-type(6) {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-eco);
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para los párrafos comunes y viñetas */
+main p {
+    font-family: var(--fuente-principal);
+    color: var(--color-texto-muted);
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+}
+
+/* ==========================================================================
+6. SECCIÓN CARRUSEL DE EMPRESAS (Tu animación original corregida)
+   ========================================================================== */
+.heading {
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+.heading em {
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-texto-dark);
+    letter-spacing: 0.05em;
+}
+
+.wrap {
+    overflow: hidden;
+    background: var(--color-blanco);
+    padding: 15px 0;
+    border-y: 1px solid #e2e8f0;
+    margin-bottom: 30px;
+}
+
+.hmove { 
+    display: flex; 
+    animation: tickerh linear 25s infinite; 
+}
+
+.hmove:hover { 
+    animation-play-state: paused; 
+}
+
+.hitem {
+    flex-shrink: 0;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hitem img {
+    max-height: 65px;
+    width: auto;
+    filter: grayscale(20%); /* Suaviza los logos para mantener armonía visual */
+    transition: filter 0.3s;
+}
+
+.hitem img:hover {
+    filter: grayscale(0%);
+}
+
+@keyframes tickerh {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); } /* Ajustado para comportamiento fluido */
+}
+
+/* ==========================================================================
+7. SECCIÓN MERCADO PAGO QR
+   ========================================================================== */
+.img {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.img img {
+    max-width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+8. FORMULARIO DE CONTACTO
+   ========================================================================== */
+.form {
+    max-width: 550px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: var(--color-blanco);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form__title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-texto-dark);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form__input-container {
+    margin-bottom: 15px;
+}
+
+.form__input-container input[type="text"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: var(--fuente-global);
+    font-size: 1rem;
+    color: var(--color-texto-dark);
+    transition: all 0.3s ease;
+}
+
+.form__input-container input[type="text"]:focus {
+    outline: none;
+    border-color: var(--color-eco);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+/* Botón de Enviar */
+.form__input-container input[type="submit"] {
+    width: 100%;
+    background-color: var(--color-eco);
+    color: var(--color-blanco);
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.form__input-container input[type="submit"]:hover {
+    background-color: var(--color-eco-hover);
+}
+
+/* Términos y condiciones debajo del form */
+.form + div {
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 40px;
+    font-size: 0.95rem;
+    color: var(--color-texto-muted);
+}
+
+/* ==========================================================================
+9. ELEMENTOS COMPLEMENTARIOS Y FOOTER
+   ========================================================================== */
+.flotanteLand {
+    position: fixed;
+    z-index: 999;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+    box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.flotanteLand img {
+    width: 32px;
+    height: 32px;
+    margin: 5px display block;
+}
+
+.imagen-transparente {
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.imagen-transparente:hover {
+    opacity: 1;
+}
+
+footer {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--color-texto-dark);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+}
+
+footer strong {
+    color: var(--color-blanco);
+}
+
+a {
+    color: var(--color-eco);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 body {
     margin: 0;
     font-family: monospace;
@@ -8,7 +367,7 @@ body {
 }
 
 /*HEADER SECTION*/
-
+/*
 .header {
     word-wrap: break-word;
     height: 100vh;
@@ -68,7 +427,7 @@ h1 {
 }
 
 /**NAVBAR SECTION**/
-
+/*
 .nav {
     background-color: #fff;
     display: flex;
@@ -157,7 +516,7 @@ h1 {
 }
 
 /*MAX-SECTION*/
-
+/*
 .main {
     
     max-width: 1000px;
@@ -178,14 +537,14 @@ p {
 }
 
 /* CARRUSEL */
-
+/*
 em {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:#0d88cf;
 }
 
 /* HIDE SCROLL BAR */
-
+/*
 .hwrap {
     overflow: hidden;
     background: #fff;
@@ -227,7 +586,7 @@ em {
     align-items: center; /* Alinea los elementos verticalmente al centro */
     text-align: left; /* Alinea el texto a la izquierda en pantallas grandes */
 }
-
+/*
 .post_grid_item img {
     width: 80px;
     height: 80px;
@@ -236,7 +595,7 @@ em {
     margin-right: 15px;
     opacity: 0.8; 
 }
-
+/*
 .post_content {
     flex: 1;
 }
@@ -252,7 +611,7 @@ em {
     text-decoration: none;
     transition: color 0.3s;
 }
-
+/*
 .post_content h6 a:hover {
     color: #007bff;
 }
@@ -276,6 +635,7 @@ em {
 
 
 /* Media query para pantallas móviles */
+/*
 @media (max-width: 768px) {
     .latest_posts_grid {
         grid-template-columns: 1fr;
@@ -298,7 +658,7 @@ em {
 
 
 /* ------- CONTACT QUERIES ------- */
-
+/*
 @CONTAINER form (min-width: 56.25rem){
     
     .form__form {
@@ -368,7 +728,7 @@ em {
 
 
 /* M.PAGO Y CONTACTO */
-
+/*
 
 h3, form__titel {
     margin-left: 100px;
@@ -426,7 +786,7 @@ section {
 
 /* ------- FOOTER ------- */
 
-
+/*
     
 footer {
     padding: 60px;
@@ -440,5 +800,6 @@ footer {
 a {
     color: #69f;
     text-decoration: none;
-}
+} 
+/*****
 
